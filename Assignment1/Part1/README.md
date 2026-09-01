@@ -85,6 +85,13 @@ The goal is to understand basic patterns in the dataset and answer questions suc
 
 This helps us understand the data better before asking a model to make predictions.
 
+For visualization, I used **Matplotlib**.
+
+**Matplotlib** is a Python library used to create charts and graphs. It helps convert numerical data into visual form so that patterns are easier to understand.
+
+The first EDA step is to check the overall survival distribution.
+
+
 The first EDA step is to check the overall survival distribution.
 
 
