@@ -6,6 +6,10 @@ The objective of this project is to analyze the Titanic passenger data and build
 Step 1: Identifying and choosing a kaggle DataSet
 - I am choosing Titanic Survival Prediction Dataset
 
+- Google collab link :
+
+- https://colab.research.google.com/drive/1fPkGpGySCqBkFd8GbqN2yzIF-WXF6jBS?usp=sharing
+
 ## Dataset (Load Data)
 For this assignment, I am using the Titanic - Machine Learning from Disaster dataset from Kaggle.
 
