@@ -179,7 +179,7 @@ This shows that younger passengers had a higher survival rate, while survival ge
 
 This age-group analysis was more useful than comparing only the average age of survivors and non-survivors, because it revealed differences between specific age ranges.
 
-# Calculate average fare for survivors and non-survivors
+## Calculate average fare for survivors and non-survivors
 average_fare_by_survival = train_df.groupby('Survived')['Fare'].mean()
 
 print(average_fare_by_survival)
@@ -196,3 +196,32 @@ The results showed:
 Passengers who survived had paid a much higher average fare.
 
 This suggests that higher fare was associated with a better chance of survival. However, fare is also closely related to passenger class, so this result may partly reflect the higher survival rate already observed among First Class passengers.
+
+
+## Feature Preparation
+
+Before building the machine learning model, the dataset needs to be converted into a form the model can understand.
+
+A list called `features` is used to select only the useful columns for prediction:
+
+- `Pclass`
+- `Sex`
+- `Age`
+- `SibSp`
+- `Parch`
+- `Fare`
+- `Embarked`
+
+Columns such as `PassengerId`, `Name`, and `Ticket` are not used in this basic model because they are either identifiers or contain values that are too unique to be useful directly.
+
+The selected input columns are stored in `X`, while the value we want to predict, `Survived`, is stored in `y`.
+
+The columns `Sex` and `Embarked` contain text categories, so they need to be converted into numerical form.
+
+For this, Pandas provides the `get_dummies()` function.
+
+`pd.get_dummies()` converts categorical values into separate 0/1 columns so that a machine learning model can use them.
+
+For example, instead of storing `male` and `female` as text, the data can be represented using a numeric column containing 0 and 1.
+
+The option `drop_first=True` removes one category because it can already be inferred from the remaining columns. This avoids adding unnecessary duplicate information.
