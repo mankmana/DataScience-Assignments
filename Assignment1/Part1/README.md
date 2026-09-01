@@ -55,3 +55,19 @@ Using `train_df.info()`, I inspected the structure of the training dataset.
 The dataset contains both numerical and categorical features, which will require preprocessing before building the machine learning model.
 
 
+# Data Cleaning
+
+From the analysis, dataset contained missing values in `Age`, `Cabin`, and `Embarked`.
+
+To clean the data:
+
+- Missing `Age` values were replaced with the median age.
+- Missing `Embarked` values were replaced with the most common embarkation port.
+- The `Cabin` column was removed because a large portion of its values were missing.
+
+After this, I verified the dataset again using:
+
+```python
+train_df.isnull().sum() and now there are no missing values in any columns. 
+
+
