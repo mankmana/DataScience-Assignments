@@ -52,7 +52,6 @@ Using `train_df.info()`, I inspected the structure of the training dataset.
 - `Cabin` contains 687 missing values
 - `Embarked` contains 2 missing values
 
-The dataset contains a mix of numerical and categorical features, which will require preprocessing before model training.
-
+The dataset contains both numerical and categorical features, which will require preprocessing before building the machine learning model.
 
 
