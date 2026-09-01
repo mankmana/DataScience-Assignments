@@ -1,4 +1,4 @@
-# explain what you did in assignment 1 part 1
+# Explain what you did in assignment 1 part 1
 
 Objective
 The objective of this project is to analyze the Titanic passenger data and build a machine learning model that can predict whether a passenger survived based on features such as age, gender, passenger class, fare, and family information.
