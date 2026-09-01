@@ -42,24 +42,17 @@ This helped me see the columns, data types, and missing values in the data.
 train_df.isnull().sum() - this will give me the number of missing value for each column so it becomes easier to identify which columns would need a data cleanup
 
 
-Manali Mankad <mankmana23@gmail.com>
-10:58 AM (0 minutes ago)
-to Manali
+### Dataset Structure
 
-## Initial Data Inspection
+Using `train_df.info()`, I inspected the structure of the training dataset.
 
-To understand the dataset and identify missing values, I used:
+- Total rows: 891
+- Total columns: 12
+- `Age` contains 177 missing values
+- `Cabin` contains 687 missing values
+- `Embarked` contains 2 missing values
 
-```python
-train_df.isnull().sum()
-
-The result showed:
-
-Age - 177 missing values
-Cabin - 687 missing values
-Embarked - 2 missing values
-Other columns had no missing values.
-This helped identify which columns need preprocessing before building the model.
+The dataset contains a mix of numerical and categorical features, which will require preprocessing before model training.
 
 
 
