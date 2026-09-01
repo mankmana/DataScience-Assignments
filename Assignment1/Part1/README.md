@@ -178,3 +178,21 @@ The survival rates were approximately:
 This shows that younger passengers had a higher survival rate, while survival generally decreased as age increased.
 
 This age-group analysis was more useful than comparing only the average age of survivors and non-survivors, because it revealed differences between specific age ranges.
+
+# Calculate average fare for survivors and non-survivors
+average_fare_by_survival = train_df.groupby('Survived')['Fare'].mean()
+
+print(average_fare_by_survival)
+
+#### Average Fare by Survival Status
+
+The next EDA step compared the average fare paid by passengers who survived with those who did not.
+
+The results showed:
+
+- Average fare for passengers who did not survive: approximately **22.1**
+- Average fare for passengers who survived: approximately **48.4**
+
+Passengers who survived had paid a much higher average fare.
+
+This suggests that higher fare was associated with a better chance of survival. However, fare is also closely related to passenger class, so this result may partly reflect the higher survival rate already observed among First Class passengers.
