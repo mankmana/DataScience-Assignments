@@ -287,3 +287,68 @@ I used:
 This gives the model up to 1000 internal optimization steps to find a stable solution while training. It may stop earlier if it converges before reaching that limit.
 
 Logistic Regression was selected because it is simple, widely used, and suitable for a binary prediction problem like Titanic survival.
+
+## Making Predictions
+
+After training the Logistic Regression model, I used it to predict survival for the testing data.
+
+The model used the passenger features in `X_test`, such as:
+
+- Passenger class
+- Gender
+- Age
+- Number of siblings/spouse
+- Number of parents/children
+- Fare
+- Embarkation port
+
+For each passenger, the model combined these features with the patterns it had learned from the training data and estimated the probability of survival.
+
+The prediction output uses:
+
+- `0` = Predicted not to survive
+- `1` = Predicted to survive
+
+For example, the first 20 predictions were:
+
+`[0 0 0 1 1 1 1 0 1 1 0 0 0 0 0 1 0 1 0 0]`
+
+This means the model predicted survival individually for each passenger based on that passenger's combination of features.
+
+At this stage, these are only predictions. We still need to compare them with the actual survival values from the testing set to measure how accurate the model is.
+
+
+## Model Evaluation - Accuracy
+
+After making predictions on the testing data, I compared the predicted survival values with the actual values using `accuracy_score()` from Scikit-learn.
+
+The Logistic Regression model achieved an accuracy of approximately **81%**.
+
+This means the model correctly predicted the survival outcome for about **81 out of every 100 passengers** in the testing set.
+
+Since the testing set contained 179 passengers, the model made roughly **145 correct predictions** and about **34 incorrect predictions**.
+
+Accuracy gives an overall idea of model performance, but it does not show what type of mistakes the model made. The next step is to use a confusion matrix to understand those errors in more detail.
+
+
+## Confusion Matrix
+
+To understand the model's predictions in more detail, I used a confusion matrix.
+
+The result was:
+
+```text
+[[90 15]
+ [19 55]]
+
+This means:
+
+90 passengers did not survive, and the model predicted this correctly.
+15 passengers did not survive, but the model predicted that they survived.
+19 passengers survived, but the model predicted that they did not survive.
+55 passengers survived, and the model predicted this correctly.
+
+Overall:
+
+Correct predictions: 145
+Incorrect predictions: 34
