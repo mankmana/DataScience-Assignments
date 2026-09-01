@@ -41,3 +41,25 @@ This helped me see the columns, data types, and missing values in the data.
 
 train_df.isnull().sum() - this will give me the number of missing value for each column so it becomes easier to identify which columns would need a data cleanup
 
+
+Manali Mankad <mankmana23@gmail.com>
+10:58 AM (0 minutes ago)
+to Manali
+
+## Initial Data Inspection
+
+To understand the dataset and identify missing values, I used:
+
+```python
+train_df.isnull().sum()
+
+The result showed:
+
+Age - 177 missing values
+Cabin - 687 missing values
+Embarked - 2 missing values
+Other columns had no missing values.
+This helped identify which columns need preprocessing before building the model.
+
+
+
