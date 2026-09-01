@@ -113,3 +113,38 @@ The result showed:
 
 This shows a very strong difference in survival based on gender. Female passengers had a much higher survival rate than male passengers.
 
+#### Survival Rate by Passenger Class
+
+The next EDA step was to compare survival rates across the three passenger classes.
+
+The Titanic dataset uses:
+
+- `1` = First Class
+- `2` = Second Class
+- `3` = Third Class
+
+The graph shows:
+
+- First Class survival rate: approximately **63%**
+- Second Class survival rate: approximately **47%**
+- Third Class survival rate: approximately **24%**
+
+This shows a clear relationship between passenger class and survival. Passengers in First Class had the highest survival rate, while passengers in Third Class had the lowest survival rate.
+
+#### Age Distribution
+
+The next EDA step was to analyze the age distribution of Titanic passengers.
+
+A **histogram** was used because age is a continuous numerical value rather than a category.
+
+The histogram uses `bins=20`, which means the complete age range is divided into 20 intervals. Matplotlib automatically identifies the minimum and maximum values in the `Age` column and divides that range into equal-sized groups.
+
+From the graph:
+
+- Most passengers were approximately between 20 and 40 years old.
+- The number of passengers generally decreases as age increases.
+- There were fewer elderly passengers compared with younger and middle-aged passengers.
+- A noticeable spike appears around the late 20s.
+
+The spike around the late 20s is partly because missing `Age` values were earlier replaced with the median age. This caused many passengers to have the same age value after data cleaning.
+
