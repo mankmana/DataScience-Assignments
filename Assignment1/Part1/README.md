@@ -68,7 +68,7 @@ To clean the data:
 After this, I verified the dataset again using:
 
 ```python
-train_df.isnull().sum() and now there are no missing values in any columns.
+train_df.isnull().sum() and now there are no missing values in any columns.```
 
 ## Exploratory Data Analysis (EDA)
 
