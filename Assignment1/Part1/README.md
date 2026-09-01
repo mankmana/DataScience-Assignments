@@ -93,7 +93,23 @@ For visualization, I used **Matplotlib**.
 
 The first EDA step is to check the overall survival distribution.
 
+In this graph:
 
-The first EDA step is to check the overall survival distribution.
+- `0` represents passengers who did not survive.
+- `1` represents passengers who survived.
 
+The purpose of this graph is to quickly compare the number of survivors and non-survivors in the dataset.
+
+#### Survival Rate by Gender
+
+The next EDA step was to compare survival rates between male and female passengers.
+
+The survival rate was calculated as a percentage for each gender.
+
+The result showed:
+
+- Female survival rate: approximately **74.2%**
+- Male survival rate: approximately **18.9%**
+
+This shows a very strong difference in survival based on gender. Female passengers had a much higher survival rate than male passengers.
 
