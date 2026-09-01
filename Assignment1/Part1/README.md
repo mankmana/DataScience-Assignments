@@ -28,7 +28,7 @@ Embarked - Port where the passenger boarded
 Survived - Survival status, where 0 means did not survive and 1 means survived
 
 
-# Initial Data Check (Understand data)
+## Initial Data Check (Understand data)
 I checked the dataset before making any changes.
 
 train_df.head()
@@ -37,7 +37,7 @@ train_df.isnull().sum()
 This helped me see the columns, data types, and missing values in the data.
 
 
-# Finding and analyzing the data for cleanup
+## Finding and analyzing the data for cleanup
 
 train_df.isnull().sum() - this will give me the number of missing value for each column so it becomes easier to identify which columns would need a data cleanup
 
@@ -55,7 +55,7 @@ Using `train_df.info()`, I inspected the structure of the training dataset.
 The dataset contains both numerical and categorical features, which will require preprocessing before building the machine learning model.
 
 
-# Data Cleaning
+## Data Cleaning
 
 From the analysis, dataset contained missing values in `Age`, `Cabin`, and `Embarked`.
 
@@ -68,6 +68,23 @@ To clean the data:
 After this, I verified the dataset again using:
 
 ```python
-train_df.isnull().sum() and now there are no missing values in any columns. 
+train_df.isnull().sum() and now there are no missing values in any columns.
+
+## Exploratory Data Analysis (EDA)
+
+EDA stands for **Exploratory Data Analysis**.
+
+In simple terms, EDA means looking at the data carefully before building a machine learning model.
+
+The goal is to understand basic patterns in the dataset and answer questions such as:
+
+- How many passengers survived?
+- Did women survive more often than men?
+- Did passenger class affect survival?
+- Did age have any relationship with survival?
+
+This helps us understand the data better before asking a model to make predictions.
+
+The first EDA step is to check the overall survival distribution.
 
 
