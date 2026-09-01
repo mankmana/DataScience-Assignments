@@ -225,3 +225,35 @@ For this, Pandas provides the `get_dummies()` function.
 For example, instead of storing `male` and `female` as text, the data can be represented using a numeric column containing 0 and 1.
 
 The option `drop_first=True` removes one category because it can already be inferred from the remaining columns. This avoids adding unnecessary duplicate information.
+
+A few things to notice:
+
+Sex is now represented by Sex_male
+True = male
+False = female
+Embarked became:
+Embarked_Q
+Embarked_S
+The missing category is C, because drop_first=True removed one category as the reference.
+
+So for example:
+
+Embarked_Q=False
+Embarked_S=False
+
+means that passenger embarked from C.
+
+Also, True/False is fine for machine learning. In practice, these behave like 1/0.
+
+## Training and Testing Data Split
+
+The prepared dataset was divided into training and testing sets so the model can be evaluated fairly.
+
+The result was:
+
+- Training rows: **712**
+- Testing rows: **179**
+
+This means approximately 80% of the Titanic data will be used to train the model, while the remaining 20% will be used to test how well the model performs on unseen passengers.
+
+This step is now complete, and the next step is to train the machine learning model.
