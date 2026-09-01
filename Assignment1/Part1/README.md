@@ -257,3 +257,33 @@ The result was:
 This means approximately 80% of the Titanic data will be used to train the model, while the remaining 20% will be used to test how well the model performs on unseen passengers.
 
 This step is now complete, and the next step is to train the machine learning model.
+
+## Model Training - Logistic Regression
+
+For the first machine learning model, I used **Logistic Regression**.
+
+```from sklearn.linear_model import LogisticRegression
+
+# Create the model
+model = LogisticRegression(max_iter=1000)
+
+# Train the model using the training data
+model.fit(X_train, y_train)
+
+print("Model training complete")
+```
+
+Logistic Regression is commonly used for classification problems where the output has two possible values. In this project:
+
+- `0` = Did not survive
+- `1` = Survived
+
+The model learns patterns from features such as passenger class, gender, age, fare, and embarkation port, and then estimates the probability of survival.
+
+I used:
+
+`max_iter=1000`
+
+This gives the model up to 1000 internal optimization steps to find a stable solution while training. It may stop earlier if it converges before reaching that limit.
+
+Logistic Regression was selected because it is simple, widely used, and suitable for a binary prediction problem like Titanic survival.
