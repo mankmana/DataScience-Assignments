@@ -148,3 +148,33 @@ From the graph:
 
 The spike around the late 20s is partly because missing `Age` values were earlier replaced with the median age. This caused many passengers to have the same age value after data cleaning.
 
+#### Average Age by Survival Status
+
+The next EDA step compared the average age of passengers who survived with those who did not.
+
+The results showed:
+
+- Average age of passengers who did not survive: approximately **30.0 years**
+- Average age of passengers who survived: approximately **28.3 years**
+
+Survivors were slightly younger on average, but the difference was small. This suggests that age alone may not have been as strong a factor as gender or passenger class.
+
+#### Survival Rate by Age Group
+
+To understand the effect of age more clearly, passengers were grouped into age ranges:
+
+- Child: 0–12 years
+- Teen: 13–17 years
+- Adult: 18–59 years
+- Senior: 60+ years
+
+The survival rates were approximately:
+
+- Child: **58%**
+- Teen: **48%**
+- Adult: **36%**
+- Senior: **27%**
+
+This shows that younger passengers had a higher survival rate, while survival generally decreased as age increased.
+
+This age-group analysis was more useful than comparing only the average age of survivors and non-survivors, because it revealed differences between specific age ranges.
