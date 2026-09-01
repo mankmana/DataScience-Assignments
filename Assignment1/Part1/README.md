@@ -348,6 +348,25 @@ This means:
 19 passengers survived, but the model predicted that they did not survive.
 55 passengers survived, and the model predicted this correctly.
 
+# Final Model Interpretation
+
+The Logistic Regression model achieved an accuracy of approximately **81%** on the testing data.
+
+The model used passenger information such as:
+
+- Passenger class
+- Gender
+- Age
+- Family information
+- Fare
+- Embarkation port
+
+to predict whether a passenger survived.
+
+The exploratory analysis showed that gender and passenger class had strong relationships with survival. Age also showed a clearer pattern when passengers were grouped into age ranges.
+
+Overall, the model performed reasonably well for a simple binary classification model, although some predictions were still incorrect.
+
 Overall:
 
 Correct predictions: 145
