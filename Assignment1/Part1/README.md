@@ -371,6 +371,33 @@ The exploratory analysis showed that gender and passenger class had strong relat
 
 Overall, the model performed reasonably well for a simple binary classification model, although some predictions were still incorrect.
 
+
+# Conclusion
+
+In this project, I used the Titanic dataset from Kaggle to go through the main steps of a data science workflow.
+
+I:
+
+- Loaded and understood the dataset
+- Identified and cleaned missing values
+- Performed exploratory data analysis using visualizations
+- Prepared the features for machine learning
+- Split the data into training and testing sets
+- Trained a Logistic Regression model
+- Evaluated the model using accuracy and a confusion matrix
+
+The model achieved an accuracy of approximately **81%**.
+
+From the exploratory analysis, gender and passenger class showed a strong relationship with survival, while age and fare also showed useful patterns.
+
+This project helped me understand how raw data is cleaned, explored, transformed, and finally used to train and evaluate a machine learning model.
+
+## Deliverables
+
+- Kaggle Dataset: Titanic - Machine Learning from Disaster
+- Google Colab Notebook: https://colab.research.google.com/drive/1fPkGpGySCqBkFd8GbqN2yzIF-WXF6jBS?usp=sharing
+- Medium Article: [Add Medium Link Here]
+
 Overall:
 
 Correct predictions: 145
