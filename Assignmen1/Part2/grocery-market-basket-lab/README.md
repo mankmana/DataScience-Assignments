@@ -3,7 +3,7 @@
 An easy-to-explain end-to-end project that discovers which grocery products are purchased together. It follows CRISP-DM and presents item popularity, pair co-occurrence, simple association rules, and store recommendations in an interactive Streamlit dashboard.
 
 
-##Prompt used
+## Prompt used
 We will build another project now.
 
 Build a simple end-to-end data science project using the Kaggle Groceries Dataset.
@@ -16,7 +16,7 @@ Keep the project easy to understand and easy to explain in a student presentatio
 
 Include a README with the dataset, what the project does, the main results, and how to run it locally.
 
-##YT Link
+## YT Link
 https://youtu.be/6Fq1HVba1gA
 
 
