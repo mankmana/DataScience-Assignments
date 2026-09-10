@@ -3,6 +3,11 @@
 An end-to-end NYC taxi fare estimation lab built around the Kaggle NYC Taxi Fare Prediction schema. It includes a responsive estimator, interactive Leaflet map, data-science dashboard, reproducible training script, model artifact, CRISP-DM research report, and a small production-ready Flask API.
 
 > The included dataset is synthetic and schema-compatible. Metrics are pipeline-validation metrics, not Kaggle leaderboard results.
+>
+## YT video link
+https://youtu.be/TXgWhE6zZDc
+
+Screenshots of the website are uploaded under screenshots folder
 
 ## Run locally
 
