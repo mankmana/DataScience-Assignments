@@ -1,0 +1,82 @@
+# NYC Taxi Lab – Fare Intelligence
+## Video Walkthrough
+YouTube: https://youtu.be/TXgWhE6zZDc
+
+##Prompt used
+Now on to another project - You will do end2end a data science project of including data, training, deployment, crisp-dm framework, 
+and an awesome front end. you can use Kaggle NYC taxi challenge. make sure that frontend includes interactive map and trip estimation.
+
+
+*Follow-ups:*
+
+- `make the admin dashboard even better with more data scientist related details. prepare a research report with crisp-dm methodology for the same as well.`
+- `please follow the autoresearch repo skills deligently for hill climbing. also match the dashboard details with research paper.`
+
+
+## Project Overview
+This project is an end-to-end machine learning application for estimating NYC taxi fares.
+
+## Original Prompt
+<professor/coding-agent prompt>
+
+## Dataset
+Kaggle-compatible NYC taxi data / simulated NYC-like records.
+
+## What the Project Does
+Users select:
+- Pickup location
+- Drop-off location
+- Number of passengers
+- Pickup hour
+
+The application estimates the taxi fare and displays an uncertainty range.
+
+## Machine Learning Model
+The deployed model is a Ridge Regression model.
+
+## Main Features
+- Interactive trip estimator
+- Pickup/drop-off map
+- Fare prediction
+- Uncertainty range
+- Model monitoring
+- Feature importance
+- CRISP-DM workflow
+
+## CRISP-DM Process
+
+### 1. Business Understanding
+Estimate the taxi fare before pickup.
+
+### 2. Data Understanding
+Analyze trip coordinates, time, passenger count, and fare.
+
+### 3. Data Preparation
+Clean invalid values and create useful features such as trip distance.
+
+### 4. Modeling
+Compare multiple regression approaches and select the best-performing model.
+
+### 5. Evaluation
+Evaluate the model using RMSE, MAE, and explained variance.
+
+### 6. Deployment
+Expose the trained model through the interactive web application.
+
+## Model Performance
+- Test RMSE: approximately $2.07
+- MAE: approximately $1.63
+- Explained variance: approximately 98.8%
+- Prediction coverage: 91%
+
+## Model Explainability
+Trip distance has the largest impact on the predicted fare.
+
+## Screenshots
+Folder available under repo
+
+
+
+
+## What I Learned
+This project demonstrates the complete flow from data preparation and model training to deployment and monitoring
