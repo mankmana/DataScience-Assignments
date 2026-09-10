@@ -4,6 +4,30 @@ An end-to-end customer segmentation project using the popular Kaggle **Mall Cust
 
 The app runs immediately with a deterministic built-in demo dataset. To use the original Kaggle data, download `Mall_Customers.csv` from the [Customer Segmentation Dataset](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python) and place it at `data/Mall_Customers.csv`.
 
+#YT Video Link:
+https://youtu.be/cJ3kIsGzE3A
+
+#Prompt used
+Now we will create a second project. Act like you're a professional data scientist and follow the below prompt:
+Build an end-to-end customer segmentation data science project using a popular public Kaggle customer dataset.
+Follow the CRISP-DM framework throughout the project.
+Use unsupervised machine learning for customer segmentation, preferably K-Means clustering.
+The project should include:
+Dataset loading and cleaning
+Exploratory data analysis
+Feature preprocessing and scaling
+Selection of the optimal number of clusters using the Elbow Method and Silhouette Score
+K-Means clustering
+Clear interpretation and naming of each customer segment
+Visualizations showing the clusters
+A simple interactive data science dashboard where users can explore customer segments and cluster characteristics
+Business insights explaining how each customer segment could be targeted differently
+A README explaining the architecture, methodology, dataset, model, results, and how to run the project
+Keep the implementation practical and easy to demonstrate.
+The final application should run locally and should clearly show the complete flow from raw customer data to customer segmentation and dashboard visualization.
+https://customer-segmentation-lab.san-jose-sta-2217.chatgpt.site
+
+
 ## Run locally
 
 ```bash
