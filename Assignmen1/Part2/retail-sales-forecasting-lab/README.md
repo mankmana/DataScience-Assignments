@@ -2,6 +2,21 @@
 
 An easy-to-present, end-to-end time-series forecasting project using the popular Kaggle **Walmart Store Sales Forecasting** dataset schema. The goal is to learn historical weekly sales patterns and estimate future sales for a selected store.
 
+
+## Prompt used
+Build an end-to-end time series forecasting data science project using a popular Kaggle retail sales dataset.
+The goal is to use historical sales data to predict future sales.
+Follow the CRISP-DM framework.
+Clean and explore the data, show sales trends over time, train a simple forecasting model, compare actual sales with predicted sales, and create a simple dashboard showing historical trends and future forecasts.
+Include useful business insights - expected high-sales and low-sales periods.
+Keep the project simple, visual, and easy to explain in a student presentation.
+Include a README with the dataset, project overview, main results, screenshots, and instructions to run it locally.
+
+help me run it locally.
+
+## YT link
+https://youtu.be/_sqVeavTcZM
+
 ## Dataset
 
 The app accepts a Walmart-style CSV with `Store`, `Date`, `Weekly_Sales`, `Holiday_Flag`, `Temperature`, `Fuel_Price`, `CPI`, and `Unemployment`. Download the Kaggle training data and place it at `data/train.csv`.
