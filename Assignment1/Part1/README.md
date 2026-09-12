@@ -396,7 +396,8 @@ This project helped me understand how raw data is cleaned, explored, transformed
 
 - Kaggle Dataset: Titanic - Machine Learning from Disaster
 - Google Colab Notebook: https://colab.research.google.com/drive/1fPkGpGySCqBkFd8GbqN2yzIF-WXF6jBS?usp=sharing
-- Medium Article: [Add Medium Link Here]
+- Medium Article: [https://medium.com/@manalivijay.mankad/titanic-survival-prediction-from-data-cleaning-to-machine-learning-f17731ef365a?sharedUserId=manalivijay.mankad]
+
 
 Overall:
 
