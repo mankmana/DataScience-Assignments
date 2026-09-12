@@ -57,7 +57,7 @@ Together, these tests cover the main data-cleaning path and the basic prediction
 The edge cases considered are missing `Age`, missing `Embarked`, the mostly empty `Cabin` column, and the requirement that predictions remain binary. Additional edge cases that could be tested include an empty dataset, invalid passenger values, all values missing in a categorical column, and a missing `data/train.csv` file.
 
 
-### Unit-Test Results
+#### Unit-Test Results
 
 The test suite passed successfully:
 
@@ -76,12 +76,87 @@ The application includes error handling for a missing dataset file. The Streamli
 
 If the file is missing, the application displays a warning message instead of stopping with an unhandled error:
 
-```text
-Add the Kaggle file at data/train.csv before running the dashboard.
 
 ### Package Installation and Python Path Configuration
 
 The project dependencies were installed from `requirements.txt`:
 
-```bash
+bash
 python3 -m pip install -r requirements.txt
+
+
+### Step 6: Run the Streamlit Application
+
+After completing the refactoring and unit testing, I launched the application using Streamlit. The dashboard displayed the passenger input form, dataset metrics, survival-rate visualization, and prediction button. I tested the interface by entering passenger details and generating a survival prediction.
+
+#### What Is a Streamlit Application?
+
+Streamlit is a Python framework used to create interactive web applications for data science and machine-learning projects. It allows Python code, input controls, charts, metrics, and model predictions to be displayed in a browser without requiring extensive HTML, CSS, or JavaScript.
+
+#### Why Streamlit Is Used in This Project
+
+Streamlit converts the Titanic Logistic Regression model into an interactive dashboard. Users can enter passenger information such as passenger class, gender, age, fare, family details, and embarkation port. The application then uses the trained model to predict whether the passenger is likely to survive.
+
+The dashboard also displays dataset statistics and a survival-rate chart. This makes the machine-learning model easier to demonstrate and use than running predictions only from a Python script or notebook.
+
+### Step 7: Test the Streamlit Dashboard
+
+I launched the Titanic dashboard locally using Streamlit. The interface displayed passenger input controls, dataset metrics, a survival-rate chart, and a prediction button. I tested the application by entering passenger details and generating survival predictions through the browser interface.
+
+### Step 8: Testing Survival and Non-Survival Scenarios
+
+I tested the dashboard with both types of prediction outcomes.
+
+For a higher-risk example, I entered a third-class male passenger with an age of 22, one sibling or spouse aboard, no parents or children aboard, a fare of 7.25, and embarkation port S. The model predicted that this passenger would not survive.
+
+I also tested a first-class female passenger scenario. The model predicted that this passenger would survive.
+
+Testing both outcomes confirms that the dashboard can return both possible binary predictions: survived (`1`) and did not survive (`0`).
+
+
+### Debugging and Fixing Prediction-Time Encoding
+
+During dashboard testing, a third-class male passenger with the following details was predicted as surviving:
+
+- Passenger class: 3
+- Sex: male
+- Age: 22
+- Siblings/spouses aboard: 1
+- Parents/children aboard: 0
+- Fare: 7.25
+- Embarkation port: S
+
+This result required investigation because the passenger represents a higher-risk profile in the Titanic dataset.
+
+The suspected issue was that `pd.get_dummies()` was being applied separately to a single passenger row inside `predict_survival()`. When `drop_first=True` is applied to one row, the resulting columns may not match the columns created during model training. This can cause the passenger's gender or embarkation information to be encoded incorrectly.
+
+The proposed fix creates the categorical columns explicitly:
+
+- `Sex_male`
+- `Embarked_Q`
+- `Embarked_S`
+
+The prediction row is then reindexed to exactly match the feature columns used during training. This ensures that training-time and prediction-time data have the same structure.
+
+A regression test was also added to verify that this passenger scenario is processed correctly and that the prediction remains a valid binary value of `0` or `1`.
+
+The application must be saved and restarted after applying the fix so that Streamlit uses the updated code. The prediction should then be tested again in the dashboard.
+
+### Debugging Fix Verification
+
+After correcting the prediction-time categorical encoding, I restarted the Streamlit application and tested the same third-class male passenger scenario.
+
+The input was:
+
+- Passenger class: 3
+- Sex: male
+- Age: 22
+- Siblings/spouses aboard: 1
+- Parents/children aboard: 0
+- Fare: 7.25
+- Embarkation port: S
+
+The updated dashboard predicted:
+
+```text
+Prediction: This passenger is predicted not to survive.
