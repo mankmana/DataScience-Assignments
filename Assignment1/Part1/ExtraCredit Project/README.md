@@ -54,3 +54,4 @@ The screencast should demonstrate:
 - Dependencies: `requirements.txt`
 - Screencast/video link: **Add link here**
 - medium article - https://medium.com/@manalivijay.mankad/titanic-survival-prediction-dashboard-cb24b6bc68e6?sharedUserId=manalivijay.mankad
+- YT video link - https://youtu.be/UdMGsX9Qp3k
