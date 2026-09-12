@@ -53,3 +53,4 @@ The screencast should demonstrate:
 - Tests: `tests/test_app.py`
 - Dependencies: `requirements.txt`
 - Screencast/video link: **Add link here**
+- medium article - https://medium.com/@manalivijay.mankad/titanic-survival-prediction-dashboard-cb24b6bc68e6?sharedUserId=manalivijay.mankad
